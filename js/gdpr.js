@@ -25,9 +25,10 @@ window.addEventListener("load", function() {
                 "background": "#e62576"
             }
         },
-        "theme": "edgeless",
-        "type": "opt-in",
+        "theme": "edgeless", //classic, block, wire
+        "type": "opt-in", // "", opt-in, opt-out
         "content": pGdprContent,
+        "position": "bottom-left", // "empty", bottom-right, bottom-left, top
 
         // When initalised
         onInitialise: function(status) {
