@@ -1,3 +1,4 @@
+require('./cookieconsent');
 import * as Gdpr from './loadScripts';
 
 var pGdprContent = {
@@ -9,9 +10,14 @@ var pGdprContent = {
 }
 var pGdprConf = {
     // Google Analytics
-    "ga_account": "UA-XXXXXXX-X",
+    "ga_account": "UA-37178042-1",
     "ga_link_attr":1,
     "ga_anon":1,
+
+    // Statcounter
+    'sc_project': 11693851,
+    'sc_invisible': 1,
+    'sc_security': 27227997,
 }
 
 
@@ -25,10 +31,9 @@ window.addEventListener("load", function() {
                 "background": "#e62576"
             }
         },
-        "theme": "edgeless", //classic, block, wire
-        "type": "opt-in", // "", opt-in, opt-out
+        "theme": "edgeless",
+        "type": "opt-in",
         "content": pGdprContent,
-        "position": "bottom-left", // "empty", bottom-right, bottom-left, top
 
         // When initalised
         onInitialise: function(status) {
